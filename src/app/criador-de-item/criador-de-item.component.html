@@ -1,0 +1,13 @@
+<div class="item-creator">
+  <form (ngSubmit)="onSubmit()" #itemForm="ngForm">
+    <input
+      type="text"
+      name="itemName"
+      [(ngModel)]="itemName"
+      required
+      #itemNameInput="ngModel"
+      placeholder="Nome do item"
+    />
+    <button type="submit" [disabled]="!itemForm.form.valid">Criar</button>
+  </form>
+</div>

@@ -1,0 +1,23 @@
+<div class="app-container">
+    <app-criador-de-item (itemCreated)="onItemCreated($event)"></app-criador-de-item>
+    <div class="item-list">
+      <h2>Não Comprados</h2>
+      <div *ngFor="let item of itemsNaoComprados">
+        <app-item-card
+          [item]="item"
+          (compradoToggled)="onCompradoToggled($event)"
+          (itemDeleted)="onItemDeleted($event)"
+        ></app-item-card>
+      </div>
+    </div>
+    <div class="item-list">
+      <h2>Comprados</h2>
+      <div *ngFor="let item of itemsComprados">
+        <app-item-card
+          [item]="item"
+          (compradoToggled)="onCompradoToggled($event)"
+          (itemDeleted)="onItemDeleted($event)"
+        ></app-item-card>
+      </div>
+    </div>
+</div>

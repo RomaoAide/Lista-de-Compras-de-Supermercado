@@ -1,0 +1,11 @@
+<div class="item-card">
+  <div class="item-name" [ngClass]="{'strike-through': item.comprado}">
+    {{ item.nome }}
+  </div>
+  <button class="item-button" (click)="toggleComprado()">
+    {{ item.comprado ? 'Mover para não-comprados' : 'Mover para comprados' }}
+  </button>
+  <div class="item-trash" (click)="deleteItem()">
+    🗑️
+  </div>
+</div>
